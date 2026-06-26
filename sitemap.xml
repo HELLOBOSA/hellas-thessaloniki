@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thessaloniki.hellasreform.gr/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://thessaloniki.hellasreform.gr/blog/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://thessaloniki.hellasreform.gr/blog/anakainisi-mpaniou-thessaloniki/</loc>
@@ -55,5 +55,9 @@
   <url>
     <loc>https://thessaloniki.hellasreform.gr/blog/kostos-anakainisis-thessaloniki-2026/</loc>
     <lastmod>2026-06-22</lastmod>
+  </url>
+  <url>
+    <loc>https://thessaloniki.hellasreform.gr/blog/anakainisi-epaggelmatikou-xorou-thessaloniki/</loc>
+    <lastmod>2026-06-26</lastmod>
   </url>
 </urlset>
