@@ -7,5 +7,36 @@
 <meta name="robots" content="noindex, follow">
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,sans-serif;background:#f9f8f6;color:#1a1a18;display:grid;place-items:center;min-height:100dvh;text-align:center;padding:2rem}h1{font-size:clamp(4rem,20vw,10rem);font-weight:700;line-height:1;color:#d4a96a}p{margin-top:1rem;font-size:1.1rem;color:#666}a{display:inline-block;margin-top:2rem;padding:12px 28px;background:#1a1a18;color:#fff;text-decoration:none;border-radius:6px;font-size:.9rem}a:hover{background:#d4a96a}</style>
 </head>
-<body><div><h1>404</h1><p>Η σελίδα που ζητήσατε δεν υπάρχει.</p><a href="/">← Επιστροφή στην αρχική</a></div></body>
+<body><div><h1>404</h1><p>Η σελίδα που ζητήσατε δεν υπάρχει.</p><a href="/">← Επιστροφή στην αρχική</a></div>
+
+<!-- HELLASREFORM MINIMAL COOKIE BANNER -->
+<script>
+(function(){
+  var CONSENT_KEY='hellasreform_cookie_consent_v1';
+  var OLD_COOKIE_KEY='cookieConsent';
+  var CONSENT_DAYS=180;
+  var copy={
+    el:{title:'Χρησιμοποιούμε cookies',more:'Περισσότερα',reject:'Απόρριψη',accept:'Αποδοχή',legalUrl:'https://hellasreform.gr/legal/'},
+    en:{title:'We use cookies',more:'More info',reject:'Reject',accept:'Accept',legalUrl:'https://hellasreform.gr/legal/'}
+  };
+  var css="#wb-cookie-banner{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;width:max-content;max-width:calc(100vw - 32px);display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 10px 8px 16px;border:1px solid rgba(255,255,255,.18);background:rgba(40,36,32,.28);color:#fff;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:999px;box-shadow:0 18px 45px rgba(0,0,0,.16);font-family:inherit}#wb-cookie-banner[hidden]{display:none}#wb-cookie-banner .wb-cookie-copy,#wb-cookie-banner .wb-cookie-actions{display:flex;align-items:center;gap:8px}#wb-cookie-banner .wb-cookie-title,#wb-cookie-banner .wb-cookie-btn{font-size:11px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}#wb-cookie-banner .wb-cookie-link{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72);text-decoration:underline;text-underline-offset:4px;white-space:nowrap}#wb-cookie-banner .wb-cookie-link:hover{color:#fff}#wb-cookie-banner .wb-cookie-btn{border:0;background:transparent;color:rgba(255,255,255,.72);padding:6px 9px;border-radius:999px;font-family:inherit;line-height:1;cursor:pointer;appearance:none;-webkit-appearance:none;transition:color .25s,background .25s}#wb-cookie-banner .wb-cookie-btn:hover{color:#fff}#wb-cookie-banner .wb-cookie-btn.accept{background:#fff;color:#111;padding:6px 11px}#wb-cookie-banner .wb-cookie-btn.accept:hover{background:rgba(255,255,255,.82);color:#111}@media(max-width:520px){#wb-cookie-banner{bottom:16px;max-width:calc(100vw - 20px);gap:7px;padding:8px 9px 8px 12px}#wb-cookie-banner .wb-cookie-copy,#wb-cookie-banner .wb-cookie-actions{gap:6px}#wb-cookie-banner .wb-cookie-title,#wb-cookie-banner .wb-cookie-btn{font-size:10px;letter-spacing:.12em}#wb-cookie-banner .wb-cookie-link{font-size:9px;letter-spacing:.12em}#wb-cookie-banner .wb-cookie-btn{padding:6px 7px}#wb-cookie-banner .wb-cookie-btn.accept{padding:6px 9px}}@media(max-width:380px){#wb-cookie-banner{flex-wrap:wrap;border-radius:18px;row-gap:8px}#wb-cookie-banner .wb-cookie-copy,#wb-cookie-banner .wb-cookie-actions{justify-content:center}}";
+  function getLang(){return (document.documentElement.lang||'el').toLowerCase().indexOf('en')===0?'en':'el'}
+  function hasOldConsentCookie(){return document.cookie.split(';').some(function(cookie){return cookie.trim().indexOf(OLD_COOKIE_KEY+'=')===0})}
+  function readConsent(){try{var raw=localStorage.getItem(CONSENT_KEY);if(!raw)return hasOldConsentCookie()?'accept':null;var data=JSON.parse(raw);if(!data.expires||data.expires<Date.now()){localStorage.removeItem(CONSENT_KEY);return null}return data.choice||null}catch(e){localStorage.removeItem(CONSENT_KEY);return null}}
+  function saveConsent(choice){var expires=Date.now()+CONSENT_DAYS*24*60*60*1000;localStorage.setItem(CONSENT_KEY,JSON.stringify({choice:choice,expires:expires}))}
+  function applyCopy(banner){var lang=getLang();var t=copy[lang]||copy.el;var title=banner.querySelector('.wb-cookie-title');var link=banner.querySelector('.wb-cookie-link');var reject=banner.querySelector('[data-choice="reject"]');var accept=banner.querySelector('[data-choice="accept"]');if(title)title.textContent=t.title;if(link){link.textContent=t.more;link.href=t.legalUrl}if(reject)reject.textContent=t.reject;if(accept)accept.textContent=t.accept}
+  function initBanner(){
+    if(readConsent())return;
+    var oldBanner=document.getElementById('cookieConsentBanner');if(oldBanner)oldBanner.remove();
+    if(!document.getElementById('wb-cookie-banner-style')){var style=document.createElement('style');style.id='wb-cookie-banner-style';style.textContent=css;document.head.appendChild(style)}
+    var banner=document.createElement('div');banner.id='wb-cookie-banner';banner.setAttribute('role','region');banner.setAttribute('aria-label','Cookie notice');banner.innerHTML='<div class="wb-cookie-copy"><span class="wb-cookie-title"></span><a class="wb-cookie-link" href="https://hellasreform.gr/legal/" target="_blank" rel="noopener noreferrer"></a></div><div class="wb-cookie-actions"><button class="wb-cookie-btn" type="button" data-choice="reject"></button><button class="wb-cookie-btn accept" type="button" data-choice="accept"></button></div>';
+    document.body.appendChild(banner);applyCopy(banner);
+    banner.querySelectorAll('[data-choice]').forEach(function(button){button.addEventListener('click',function(){saveConsent(button.getAttribute('data-choice'));banner.hidden=true})});
+    document.querySelectorAll('.lang [data-lang]').forEach(function(button){button.addEventListener('click',function(){setTimeout(function(){applyCopy(banner)},0)})});
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initBanner)}else{initBanner()}
+})();
+</script>
+<!-- END HELLASREFORM MINIMAL COOKIE BANNER -->
+</body>
 </html>
