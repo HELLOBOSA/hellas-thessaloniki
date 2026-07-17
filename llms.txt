@@ -25,8 +25,8 @@ Brand: Hellas Reform (one-word wordmark: Hellasreform). This site is Hellas Refo
 
 - [Home](https://thessaloniki.hellasreform.gr/): Services, process, gallery and contact form
 - [Blog](https://thessaloniki.hellasreform.gr/blog/): Renovation guides and articles for Thessaloniki
-- [Cities / Πόλεις](https://thessaloniki.hellasreform.gr/cities/): Service areas
-- [Partners / Συνεργάτες](https://thessaloniki.hellasreform.gr/partners/): Collaborating professionals
+- [Cities / Πόλεις](https://hellasreform.gr/cities/): Service areas
+- [Partners / Συνεργάτες](https://hellasreform.gr/partners/): Collaborating professionals
 
 ## Blog Articles
 
