@@ -859,7 +859,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   }
   langButtons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
   var saved = 'el';
-  try { saved = localStorage.getItem(LS_LANG) || (document.cookie.match(/(?:^|; )hellasreform_lang=([^;]*)/) || [])[1] || 'el'; } catch (e) {}
+  try { saved = (document.cookie.match(/(?:^|; )hellasreform_lang=([^;]*)/) || [])[1] || localStorage.getItem(LS_LANG) || 'el'; } catch (e) {}
   setLang(saved);
 
   /* ---------- marquee seamless loop ---------- */
